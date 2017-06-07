@@ -1,3 +1,5 @@
+[![wercker status](https://app.wercker.com/status/71ca0846f5e839b6841e1f44cf3cfb15/m/master "wercker status")](https://app.wercker.com/project/byKey/71ca0846f5e839b6841e1f44cf3cfb15)
+
 # UnionFindTree
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/union_find_tree`. To experiment with that code, run `bin/console` for an interactive prompt.
