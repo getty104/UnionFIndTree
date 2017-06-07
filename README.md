@@ -21,6 +21,20 @@ Or install it yourself as:
     $ gem install union_find_tree
 
 ## Usage
+```ruby
+require 'union_find_tree'
+include UnionFindTree
+
+tree =  UnionFind.new
+tree.unite(1,2)
+tree.same?(1,2) #=> true
+tree.same?(2,3) #=> false
+tree.size(1) #=> 2
+tree.size(3) #=> 1
+
+```
+This tree's data size is dynamic variable.  
+If you want to use this library to programming contests, you can copy and paste from lib/union_find_tree.rb
  
 ## Development
 
@@ -36,5 +50,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
-# UnionFIndTree

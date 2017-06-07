@@ -1,5 +1,5 @@
 require "spec_helper"
-
+include UnionFindTree
 RSpec.describe UnionFindTree do
 
   it "has a version number" do
@@ -8,24 +8,31 @@ RSpec.describe UnionFindTree do
 
   describe "same? returns true" do
     it "same? method successfully work" do
-      tree = UnionFindTree::UnionFindTree.new
+      tree = UnionFind.new
       tree.unite(1,2)
       tree.unite(2,3)
       expect(tree.same?(1,3)).to eq(true)
     end
 
     it "same? returns false" do
-      tree = UnionFindTree::UnionFindTree.new
+      tree = UnionFind.new
       tree.unite(1,2)
       tree.unite(3,4)
       expect(tree.same?(1,4)).to eq(false)
     end
   end
 
-  it "size method successfully work" do
-      tree = UnionFindTree::UnionFindTree.new
+  describe "size method successfully work" do
+    it "when item is united" do
+      tree = UnionFind.new
       tree.unite(1,2)
       tree.unite(2,3)
-    expect(tree.size(1)).to eq(3)
+      expect(tree.size(1)).to eq(3)
+    end
+
+    it "when item is not united" do
+            tree = UnionFind.new
+       expect(tree.size(1)).to eq(1)
+    end
   end
 end

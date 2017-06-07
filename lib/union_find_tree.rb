@@ -1,7 +1,7 @@
 require "union_find_tree/version"
 
 module UnionFindTree
-class UnionFindTree
+class UnionFind
 
   class ParArray < Hash
     def [] key
