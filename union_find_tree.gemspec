@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hayabusatoshihumi@gmail.com"]
 
   spec.summary       = %q{ This is a union_find_tree library. }
-  spec.description   = %q{ This is a union_fin_tree library. It is used for connecting and grouping items.}
+  spec.description   = %q{ This is a union_find_tree library. It is used for connecting and grouping items. you can connect any object}
   spec.homepage      = "https://github.com/getty104/UnionFIndTree"
   spec.license       = "MIT"
 

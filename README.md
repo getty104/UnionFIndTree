@@ -23,6 +23,10 @@ Or install it yourself as:
     $ gem install union_find_tree
 
 ## Usage
+This tree's data size is dynamic variable.  
+If you want to use this library to programming contests, you can copy and paste from lib/union_find_tree.rb
+
+example1
 ```ruby
 require 'union_find_tree'
 include UnionFindTree
@@ -35,8 +39,26 @@ tree.size(1) #=> 2
 tree.size(3) #=> 1
 
 ```
-This tree's data size is dynamic variable.  
-If you want to use this library to programming contests, you can copy and paste from lib/union_find_tree.rb
+
+you can add any object.
+
+example2
+```ruby
+require 'union_find_tree'
+include UnionFindTree
+
+tree =  UnionFind.new
+o1 = Array.new(1)
+o2 = Array.new(2)
+o3 = Array.new(3)
+tree.unite(o1,o2)
+tree.same?(o1,o2) #=> true
+tree.same?(o1,o3) #=> false
+tree.size(o1) #=> 2
+tree.size(o3) #=> 1
+
+```
+
  
 ## Development
 
