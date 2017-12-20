@@ -1,5 +1,4 @@
 require "union_find_tree/version"
-
 module UnionFindTree
   class UnionFind
     class ParArray < Hash
@@ -8,28 +7,22 @@ module UnionFindTree
         super(key)
       end
     end
-
     class SizeArray < Hash
       def [] key
         self[key] = 1 if super(key).nil?
         super(key)
       end
     end
-
     def initialize()
       @par = ParArray.new
       @size = SizeArray.new
     end
-
     private
-
     def find(x)
       return x if x == @par[x]
       return @par[x] = find(@par[x])
     end
-
     public
-
     def unite(x, y)
       x = find(x)
       y = find(y)
@@ -38,11 +31,9 @@ module UnionFindTree
       @par[y] = x
       @size[x] += @size[y]
     end
-
     def same?(x, y)
       return find(x) == find(y)
     end
-
     def size(x)
       return @size[find(x)]
     end
