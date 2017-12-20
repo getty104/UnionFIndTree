@@ -17,12 +17,10 @@ module UnionFindTree
       @par = ParArray.new
       @size = SizeArray.new
     end
-    private
     def find(x)
       return x if x == @par[x]
       return @par[x] = find(@par[x])
     end
-    public
     def unite(x, y)
       x = find(x)
       y = find(y)
