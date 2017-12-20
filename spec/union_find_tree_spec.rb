@@ -6,15 +6,15 @@ RSpec.describe UnionFindTree do
     expect(UnionFindTree::VERSION).not_to be nil
   end
 
-  describe "same? returns true" do
-    it "same? method successfully work" do
+  describe "same?" do
+    it "successfully work" do
       tree = UnionFind.new
       tree.unite(1,2)
       tree.unite(2,3)
       expect(tree.same?(1,3)).to eq(true)
     end
 
-    it "same? returns false" do
+    it "returns false" do
       tree = UnionFind.new
       tree.unite(1,2)
       tree.unite(3,4)
@@ -22,7 +22,7 @@ RSpec.describe UnionFindTree do
     end
   end
 
-  describe "size method successfully work" do
+  describe "size" do
     it "when item is united" do
       tree = UnionFind.new
       tree.unite(1,2)

@@ -1,4 +1,5 @@
 require "bundler/setup"
+require "rspec/regselect"
 require "union_find_tree"
 
 RSpec.configure do |config|
@@ -8,4 +9,11 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+if ENV["SELECTION"]
+  RSpec::Regselect.selection_start
+end
+if ENV["COVERAGE"]
+  RSpec::Regselect.coverage_start
 end
