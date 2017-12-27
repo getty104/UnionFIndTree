@@ -22,13 +22,6 @@ module UnionFindTree
       @size = SizeArray.new
     end
 
-    private
-
-    def find(x)
-      return x if x == @par[x]
-      return @par[x] = find(@par[x])
-    end
-
     public
 
     def unite(x, y)
@@ -50,5 +43,11 @@ module UnionFindTree
       return @size[find(x)]
     end
 
+    private
+
+    def find(x)
+      return x if x == @par[x]
+      return @par[x] = find(@par[x])
+    end
   end
 end
