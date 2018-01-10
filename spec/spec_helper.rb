@@ -1,5 +1,13 @@
 require "bundler/setup"
 require "rspec/regselect"
+
+if ENV["SELECTION"]
+  RSpec::Regselect.selection_start
+end
+if ENV["COVERAGE"]
+  RSpec::Regselect.coverage_start
+end
+
 require "union_find_tree"
 
 RSpec.configure do |config|
@@ -11,9 +19,3 @@ RSpec.configure do |config|
   end
 end
 
-if ENV["SELECTION"]
-  RSpec::Regselect.selection_start
-end
-if ENV["COVERAGE"]
-  RSpec::Regselect.coverage_start
-end
